@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
-const About = () => {
+const about = () => {
   return (
     <div className="about-background text-gray-800 p-0">
       <section className=" text-black ">
         <div className="w-full flex justify-center mt-3 pt-6">
-          <div className="relative w-full h-64 mt-2">
+          <div className="relative w-full -z-10 h-64 mt-2">
             <Image
               src="/Header-image.jpeg"
               alt="Header Image"
@@ -32,7 +32,7 @@ const About = () => {
             <div className="relative w-[800px] h-[500px] flex flex-col justify-center items-center">
               <div className="absolute z-10  top-0  left-1/2 -translate-x-1/2">
                 <Image
-                  src="/About.jpeg"  
+                  src="/AboutSmall.png"  
                   alt="We Are Image 1"
                   width={800}
                   height={300}
@@ -41,7 +41,7 @@ const About = () => {
               </div>
               <div className="absolute z-20 top-[70%] left-1/4 -translate-x-1/4 -translate-y-1/4  sm:top-[60%] sm:left-1/3 md:top-[44%] md:left-1/4 lg:top-[60%] lg:left-1/4">
               <Image
-                  src="/About.jpeg"  
+                  src="/About-big.png"  
                   alt="We Are Image 2"
                   width={200}
                   height={300}
@@ -52,7 +52,11 @@ const About = () => {
           </div>
         </div>
 
-        <section className="flex flex-col md:flex-row items-center justify-center mb-16 mt-6 p-8">
+        <section className="flex flex-col md:flex-row items-center justify-center mb-16 mt-6 p-8" style={{
+      backgroundImage: 'url(/World-About.png)',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+    }}>
           <div className="md:w-1/2 p-4 relative flex justify-center items-center">
             <div className="relative w-[500px] h-[500px]">
               <div className="absolute top-0 left-0 w-40 h-40 rounded-full  border-4 border-white-300 overflow-hidden">
@@ -91,7 +95,7 @@ const About = () => {
             </div>
           </div>
           <div className="md:w-1/2 p-4 text-left border-2 border-black">
-            <h2 className="text-3xl font-bold mb-4 text-center mt-6 mb-6">Why</h2>
+            <h2 className="text-3xl font-bold text-center mt-6 mb-6">Why</h2>
             <p className="mb-4 mx-10">
               To ensure public access to information and protect fundamental freedoms, in accordance with national legislation and international agreements.
             </p>
@@ -118,10 +122,10 @@ const About = () => {
         </section>
       </section>
 
-      <section className="mb-16 p-8">
+      <section className="m-16 p-8">
         <h2 className="text-4xl font-bold  mb-8">Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-[#B6B7BB] p-6 rounded-lg shadow-md relative">
+          <div className="bg-[#B6B7BB] p-8 border border-black rounded-lg shadow-md relative">
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
               <Image
                 src="/Legal-Education.jpg"  
@@ -140,7 +144,7 @@ const About = () => {
             </p>
           </div>
           
-          <div className="bg-[#B6B7BB] p-6 rounded-lg shadow-md relative">
+          <div className="bg-[#B6B7BB] p-8 border border-black rounded-lg shadow-md relative">
             <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
               <Image
                 src="/Legal-Assistance.jpeg"  
@@ -158,7 +162,7 @@ const About = () => {
             •Referral to Legal Aid Services: Connecting users with local legal aid organizations and lawyers for more in-depth assistance.
             </p>
           </div>
-          <div className="bg-[#B6B7BB] p-6 rounded-lg shadow-md relative">
+          <div className="bg-[#B6B7BB] p-8 border border-black rounded-lg shadow-md relative">
             <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
               <Image
                 src="/Community-Engagement.jpeg"  
@@ -176,7 +180,7 @@ const About = () => {
             •Social Media Engagement: Active presence on social media platforms to engage with the community, share updates, and provide quick informational snippets.
             </p>
           </div>
-          <div className="bg-[#B6B7BB] p-6 rounded-lg shadow-md relative">
+          <div className="bg-[#B6B7BB] p-8 border border-black rounded-lg shadow-md relative">
             <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
               <Image
                 src="/Advocacy and Awareness.jpeg"  
@@ -197,7 +201,7 @@ const About = () => {
             •Initiatives aimed at educating the general public about their legal rights through various media channels and community outreach programs.
             </p>
           </div>
-          <div className="bg-[#B6B7BB] p-6 rounded-lg shadow-md relative">
+          <div className="bg-[#B6B7BB] p-8 border border-black rounded-lg shadow-md relative">
             <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
               <Image
                 src="/Resource Access.jpeg"  
@@ -218,7 +222,7 @@ const About = () => {
             •Tailored legal information that addresses the unique legal landscape and requirements of different African countries.            
             </p>
           </div>
-          <div className="bg-[#B6B7BB] p-6 rounded-lg shadow-md relative">
+          <div className="bg-[#B6B7BB] p-8 border border-black rounded-lg shadow-md relative">
             <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
               <Image
                 src="/User Support.jpeg"  
@@ -245,4 +249,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default about;

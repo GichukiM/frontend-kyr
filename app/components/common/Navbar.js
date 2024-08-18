@@ -25,7 +25,9 @@ const Navbar = () => {
 
   return (
     <div>
-      <header className='bg-black text-white w-full ease-in duration-300 top-0 left-0 z-10 lg:mt-12'>
+
+      <header className='bg-black text-white w-full ease-in duration-300 top-0 left-0 z-50 lg:mt-12'>
+
         <nav className='max-w-[1366px] mx-auto h-[100px] flex items-center lg:justify-center justify-between p-4'>
           <div className='lg:mr-3'>
             <Link href='/' onClick={handleSmallerScreensNavigation}>
@@ -36,7 +38,11 @@ const Navbar = () => {
           {/* Large screen navigation */}
           <ul className='hidden md:flex font-semibold text-white items-center justify-center cursor-pointer'>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
-              <Link href=''>{t('home')}</Link>
+
+              <Link href='/'>
+                Home
+              </Link>
+
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] md:text-[11px] lg:text-[14px] text-center'>
               <Link href='/talk-to-my-government'>{t('talkToMyGovernment')}</Link>
@@ -45,10 +51,14 @@ const Navbar = () => {
               <Link href='/talk-to-my-organisation'>{t('talkToMyOrganisation')}</Link>
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
-              <Link href='/Get Legal Assistance'>{t('getLegalAssistance')}</Link>
+
+              <Link href='/get-legal-assistance'>
+                Get legal <br /> Assistance
+              </Link>
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
-              <Link href='/Educate'>{t('educate')}</Link>
+              <Link href='/educate'>Educate</Link>
+
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
               <Link href='/about'>{t('about')}</Link>
@@ -94,8 +104,12 @@ const Navbar = () => {
 
           {/* Small screen navbar */}
           <div className={menuIcon ?
-            'md:hidden absolute top-[100px] right-0 left-0 flex w-full h-screen bg-black text-white text-center ease-in duration-300' :
-            'md:hidden absolute top-[100px] right-[-100%] left-0 flex w-full h-screen bg-black text-white text-center ease-in duration-300'}>
+
+
+            'md:hidden absolute top-[100px] right-o left-0 flex z-20 w-full h-full bg-black text-white text-center ease-in duration-300' :
+
+            'md:hidden absolute top-[100px] right-0 left-[-100%] flex w-full h-screen bg-black text-white text-center ease-in duration-300'}>
+
 
             <div className='w-full'>
               <ul className='uppercase font-bold text-[12px]'>
@@ -109,13 +123,15 @@ const Navbar = () => {
                   <Link href='/talk-to-my-organisation'>{t('talkToMyOrganisation')}</Link>
                 </li>
                 <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
-                  <Link href='/Get Legal Assistance'>{t('getLegalAssistance')}</Link>
+
+                  <Link href='/get-legal-assistance'>Get legal assistance</Link>
                 </li>
                 <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
-                  <Link href='/Educate'>{t('educate')}</Link>
+                  <Link href='/educate'>Educate</Link>
                 </li>
                 <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
-                  <Link href='/about'>{t('about')}</Link>
+                  <Link href='/about'>About</Link>
+
                 </li>
               </ul>
 
