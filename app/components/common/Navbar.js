@@ -52,12 +52,12 @@ const Navbar = () => {
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
 
-              <Link href='GetLegalAssistance'>
+              <Link href='get-legal-assistance'>
                 Get legal <br /> Assistance
               </Link>
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
-              <Link href='/Educate'>Educate</Link>
+              <Link href='/educate'>Educate</Link>
 
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
@@ -88,7 +88,7 @@ const Navbar = () => {
           <div className="hidden md:flex">
             <div className='flex'>
               <Link href='/login'>
-                <button className="mr-5 md:mr-2 lg:mr-8 border-2 border-[#E0E21C] text-[#E0E21C] sm:text-[11px] sm:px-2 lg:text-[13px] rounded lg:px-4 lg:py-2 sm:py-1 sm:px-1">Login</button>
+                <button className="mr-5 md:mr-2 lg:mr-8 border-2 border-[#E0E21C] text-[#E0E21C] sm:text-[11px] sm:px-2 lg:text-[13px] rounded lg:px-4 lg:py-2 sm:py-1">Login</button>
               </Link>
               <Link href='/signup'>
                 <button className="bg-[#E0E21C] text-black hover:bg-white hover:text-[#E0E21C] sm:text-[11px] sm:px-2 lg:text-[13px] rounded lg:px-2 lg:py-2.5 sm:py-1.5">Sign Up</button>
@@ -124,10 +124,10 @@ const Navbar = () => {
                 </li>
                 <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
 
-                  <Link href='/GetLegalAssistance'>Get legal assistance</Link>
+                  <Link href='/get-legal-assistance'>Get legal assistance</Link>
                 </li>
                 <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
-                  <Link href='/Educate'>Educate</Link>
+                  <Link href='/educate'>Educate</Link>
                 </li>
                 <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
                   <Link href='/about'>About</Link>
