@@ -52,12 +52,12 @@ const Navbar = () => {
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
 
-              <Link href='/get-legal-assistance'>
+              <Link href='GetLegalAssistance'>
                 Get legal <br /> Assistance
               </Link>
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
-              <Link href='/educate'>Educate</Link>
+              <Link href='/Educate'>Educate</Link>
 
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
@@ -124,10 +124,10 @@ const Navbar = () => {
                 </li>
                 <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
 
-                  <Link href='/get-legal-assistance'>Get legal assistance</Link>
+                  <Link href='/GetLegalAssistance'>Get legal assistance</Link>
                 </li>
                 <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
-                  <Link href='/educate'>Educate</Link>
+                  <Link href='/Educate'>Educate</Link>
                 </li>
                 <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
                   <Link href='/about'>About</Link>
