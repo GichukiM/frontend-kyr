@@ -18,7 +18,7 @@ const Navbar = () => {
   }
   return (
     <div>
-      <header className='bg-black text-white w-full ease-in duration-300  top-0 left-0 z-10 lg:mt-12'>
+      <header className='bg-black text-white w-full ease-in duration-300 top-0 left-0 z-50 lg:mt-12'>
         <nav className='max-w-[1366px] mx-auto h-[100px] flex items-center lg:justify-center justify-between p-4'>
           <div className='lg:mr-3'>
             <Link href='/' onClick={handleSmallerScreensNavigation}>
@@ -30,7 +30,7 @@ const Navbar = () => {
           {/* large screen navigation */}
           <ul className='hidden md:flex font-semibold text-white items-center justify-center cursor-pointer'>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
-              <Link href=''>
+              <Link href='/'>
                 Home
               </Link>
             </li>
@@ -45,12 +45,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
-              <Link href='/Get Legal Assistance'>
+              <Link href='/get-legal-assistance'>
                 Get legal <br /> Assistance
               </Link>
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
-              <Link href='/Educate'>Educate</Link>
+              <Link href='/educate'>Educate</Link>
             </li>
             <li className='mr-5 lg:mr-8 hover:text-[#E0E21C] sm:text-[11px] lg:text-[14px] text-center'>
               <Link href='/about'>
@@ -90,7 +90,7 @@ const Navbar = () => {
           {/* small screen navbar*/}
           <div className={menuIcon ?
 
-            'md:hidden absolute top-[100px] right-o left-0 flex w-full h-screen bg-black text-white text-center ease-in duration-300' :
+            'md:hidden absolute top-[100px] right-o left-0 flex z-20 w-full h-full bg-black text-white text-center ease-in duration-300' :
 
             'md:hidden absolute top-[100px] right-0 left-[-100%] flex w-full h-screen bg-black text-white text-center ease-in duration-300'}>
 
@@ -106,13 +106,10 @@ const Navbar = () => {
                   <Link href='/talk-to-my-organisation'>Talk to my organization</Link>
                 </li>
                 <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
-                  <Link href='/Get Legal Assistance'>Get legal assistance</Link>
+                  <Link href='/get-legal-assistance'>Get legal assistance</Link>
                 </li>
                 <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
-                  <Link href='/'>Talk to my government</Link>
-                </li>
-                <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
-                  <Link href='/Educate'>Educate</Link>
+                  <Link href='/educate'>Educate</Link>
                 </li>
                 <li onClick={handleSmallerScreensNavigation} className='py-5 hover:text-[#E0E21C] cursor-pointer'>
                   <Link href='/about'>About</Link>

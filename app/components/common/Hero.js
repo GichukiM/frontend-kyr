@@ -4,7 +4,7 @@ function Page() {
   return (
     <>
       <div
-        className="relative bg-cover bg-center w-full h-[525px]"
+        className="relative bg-cover bg-center w-full -z-10 h-[525px]"
         style={{ backgroundImage: 'url(Africa.jpg)' }}
       >
         <div className="absolute inset-0 bg-black opacity-0"></div>
@@ -20,11 +20,11 @@ function Page() {
               We do this via Mobile (Call or text), Social Media (YouTube and Podcast), and website (Q&A Forum, Chatbot).
             </p>
           </div>
-          <div className="w-full md:w-[350px] lg:w-[450px] h-[525px] mt-4 md:mt-0 z-10 ml-auto">
+          <div className="w-full md:w-[350px] lg:w-[450px] h-[525px] mt-4 md:mt-0 z-10 ml-auto hidden md:block">
             <img
               src="HomeHero.png"
               alt="Hero Image"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
+              className="w-full h-full object-cover shadow-lg"
             />
           </div>
         </div>

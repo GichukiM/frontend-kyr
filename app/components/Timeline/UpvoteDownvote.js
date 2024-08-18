@@ -23,7 +23,7 @@ const UpvoteDownvote = ({ postId, onVote }) => {
   };
 
   return (
-    <div className="flex items-center bg-yellow-500 text-black rounded-lg overflow-hidden shadow-md h-9 w-56">
+    <div className="flex items-center yellow text-black rounded-lg overflow-hidden shadow-md h-9 w-56">
       <button
         onClick={handleUpvote}
         className="flex items-center justify-center w-1/2 h-full p-2"

@@ -51,7 +51,7 @@ const TalkToMyGovernment = () => {
 
         {['Executive', 'Legislature', 'Judiciary', 'State Corporations & Parastatals', 'Foreign Relations of Kenya'].map((section, index) => (
           <section key={index} className="my-8 bg-black max-w-4xl mx-auto relative">
-            <h2 className="font-normal font-poppins text-center mb-2" style={{ fontSize: '25px' }}>{section}</h2>
+            <h2 className=" text-white font-normal font-poppins text-center mb-2" style={{ fontSize: '25px' }}>{section}</h2>
             <div className="flex flex-wrap justify-center mt-4 space-x-4">
               {section === 'Executive' && (
                 <>

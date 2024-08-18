@@ -21,11 +21,11 @@ const Post = ({ post, onVote, onToggleComments, showComments, onComment, comment
   })}`;
 
   return (
-    <div className="post mb-4 p-4 bg-white shadow-md rounded">
+    <div className="post p-4 bg-white shadow-md rounded">
       <div className="post-header flex items-center">
         {/* Replace with dynamic user image and name */}
         <img
-          src={user?.avatar || '/path-to-default-user-image.png'}
+          src={user?.avatar || ''}
           alt={user?.username || 'User'}
           className="user-image w-10 h-10 rounded-full"
         />
@@ -49,15 +49,16 @@ const Post = ({ post, onVote, onToggleComments, showComments, onComment, comment
           </div>
         )}
       </div>
-      <div className="post-actions flex items-center justify-between mt-2">
-        <UpvoteDownvote postId={id} onVote={onVote} />
-        <button
-          onClick={() => onToggleComments(id)}
-          className="toggle-comments-button px-4 py-2 bg-yellow-500 text-black rounded"
-        >
-          {showComments ? 'Hide Comments' : `View ${comments.length} Comment${comments.length !== 1 ? 's' : ''}`}
-        </button>
-      </div>
+      <div className="post-actions flex flex-col sm:flex-row items-center justify-between mt-2 space-y-2 sm:space-y-0 sm:space-x-4">
+  <UpvoteDownvote postId={id} onVote={onVote} />
+  <button
+    onClick={() => onToggleComments(id)}
+    className="toggle-comments-button px-4 py-2 yellow text-black rounded"
+  >
+    {showComments ? 'Hide Comments' : `View ${comments.length} Comment${comments.length !== 1 ? 's' : ''}`}
+  </button>
+</div>
+
       {showComments && (
         <div className="comments-section mt-4">
           <Comment comments={comments} />
