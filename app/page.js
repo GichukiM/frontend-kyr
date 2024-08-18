@@ -8,6 +8,7 @@ import Hero from '../app/components/common/Hero';
 import Impact from '../app/components/Impact';
 import Services from '../app/components/Services';
 import Partners from '../app/components/Partners';
+import { useSearch } from '../app/components/common/SearchContext'; // Adjust the path as necessary
 
 const TimelinePage = () => {
   const [posts, setPosts] = useState([]);
@@ -17,6 +18,7 @@ const TimelinePage = () => {
   const [media, setMedia] = useState(null);
   const [profileImage, setProfileImage] = useState("/default-profile.jpg");
   const [isMounted, setIsMounted] = useState(false);
+  const { searchTerm } = useSearch(); // Get search term from context
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -128,6 +130,11 @@ const TimelinePage = () => {
     }
   };
 
+  // Filter posts based on the search term
+  const filteredPosts = posts.filter(post =>
+    post.attributes.Content.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <>
       <Hero />
@@ -189,7 +196,7 @@ const TimelinePage = () => {
               </div>
             </div>
 
-            {isMounted && Array.isArray(posts) && posts.length > 0 && posts.map((post, index) => (
+            {isMounted && Array.isArray(filteredPosts) && filteredPosts.length > 0 && filteredPosts.map((post, index) => (
               <div
                 key={post.id}
                 className={`mb-3 w-full bg-gray-100 p-4 shadow-md rounded-lg ${index === 0 ? 'mt-0' : 'mt-4'}`}
@@ -216,5 +223,3 @@ const TimelinePage = () => {
 };
 
 export default TimelinePage;
-
-
